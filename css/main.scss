@@ -7,7 +7,8 @@
   background-color: grey;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
   .container {
     border: black 3px solid;
     margin-top: 10rem;
@@ -24,6 +25,9 @@
 }
 
 @media (max-width: 700px) {
+  :root {
+    font-size: 10px;
+  }
   .bigContainer {
     flex-direction: column;
   }
