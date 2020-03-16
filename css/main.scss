@@ -22,3 +22,9 @@
     }
   }
 }
+
+@media (max-width: 700px) {
+  .bigContainer {
+    flex-direction: column;
+  }
+}
