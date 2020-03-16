@@ -1,8 +1,3 @@
-var button = document.getElementById("btn");
-button.addEventListener("click", function() {
-  getDataCountry();
-});
-
 async function getDataWorld() {
   const data = await fetch("https://thevirustracker.com/free-api?global=stats");
   const dataJson = await data.json();
