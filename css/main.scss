@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bigContainer {
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  .container {
+    border: black 3px solid;
+    margin-top: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    height: 40rem;
+    width: 30rem;
+    h1,
+    h3 {
+      margin: 1rem;
+    }
+  }
+}

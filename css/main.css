@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bigContainer {
+  background-color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.bigContainer .container {
+  border: black 3px solid;
+  margin-top: 10rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  text-align: center;
+  height: 40rem;
+  width: 30rem;
+}
+
+.bigContainer .container h1,
+.bigContainer .container h3 {
+  margin: 1rem;
+}
+/*# sourceMappingURL=main.css.map */
