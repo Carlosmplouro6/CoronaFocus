@@ -30,11 +30,16 @@ async function getDataCountry() {
     "https://thevirustracker.com/free-api?countryTimeline=" + countryID
   );
   const timelineJson = await timeline.json();
-  let dates = Object.keys(timelineJson.timelineitems[0]);
-  dates.pop();
+  let chartDate = [];
+  let chartInfo = [];
+  let i = 0;
   for (let [date, info] of Object.entries(timelineJson.timelineitems[0])) {
-    console.log(date, info);
+    chartDate[i] = date;
+    chartInfo[i] = info;
+    i += 1;
   }
+
+  console.log(chartDate, chartInfo);
   const totalCasesh1 = document.getElementById("totalCasesCountry");
   const totalDeathh1 = document.getElementById("totalDeathCountry");
   const totalRecoveredh1 = document.getElementById("totalRecoveredCountry");
