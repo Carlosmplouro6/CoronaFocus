@@ -26,7 +26,11 @@ async function getDataCountry() {
     "https://thevirustracker.com/free-api?countryTotal=" + countryID
   );
   const dataJson = await data.json();
-
+  const timeline = await fetch(
+    "https://thevirustracker.com/free-api?countryTimeline=" + countryID
+  );
+  const timelineJson = await timeline.json();
+  console.log(timelineJson);
   const totalCasesh1 = document.getElementById("totalCasesCountry");
   const totalDeathh1 = document.getElementById("totalDeathCountry");
   const totalRecoveredh1 = document.getElementById("totalRecoveredCountry");
@@ -46,6 +50,7 @@ async function getDataCountry() {
     "Total New Deaths: " + dataJson.countrydata[0].total_new_deaths_today;
   totalDayRecovh1.innerHTML =
     "Total Active Cases: " + dataJson.countrydata[0].total_active_cases;
+
 }
 
 getDataWorld();
