@@ -41,9 +41,9 @@ async function getDataCountry() {
   let chartDateSlice = chartDate.slice(Math.max(chartDate.length - 21, 0));
   let chartInfoSlice = chartInfo.slice(Math.max(chartInfo.length - 21, 0));
   chartDateSlice.pop();
-  chartDateSlice.pop();
   chartInfoSlice.pop();
   chartInfoSlice.pop();
+  chartInfoSlice.push(dataJson.countrydata[0].total_cases);
 
   console.log(chartDateSlice, chartInfoSlice);
   const totalCasesh1 = document.getElementById("totalCasesCountry");
@@ -75,7 +75,7 @@ async function getDataCountry() {
         {
           label: "Total Cases",
           data: chartInfoSlice,
-          backgroundColor: "grey"
+          backgroundColor: "rgb(150, 25, 25)"
         }
       ]
     },
