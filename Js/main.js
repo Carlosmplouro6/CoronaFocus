@@ -35,17 +35,24 @@ async function getDataCountry() {
   let i = 0;
   for (let [date, info] of Object.entries(timelineJson.timelineitems[0])) {
     chartDate[i] = date;
-    chartInfo[i] = info;
+    chartInfo[i] = info.total_cases;
     i += 1;
   }
+  let chartDateSlice = chartDate.slice(Math.max(chartDate.length - 21, 0));
+  let chartInfoSlice = chartInfo.slice(Math.max(chartInfo.length - 21, 0));
+  chartDateSlice.pop();
+  chartDateSlice.pop();
+  chartInfoSlice.pop();
+  chartInfoSlice.pop();
 
-  console.log(chartDate, chartInfo);
+  console.log(chartDateSlice, chartInfoSlice);
   const totalCasesh1 = document.getElementById("totalCasesCountry");
   const totalDeathh1 = document.getElementById("totalDeathCountry");
   const totalRecoveredh1 = document.getElementById("totalRecoveredCountry");
   const totalDayCasesh1 = document.getElementById("totalDayCasesCountry");
   const totalDayDeathsh1 = document.getElementById("totalDayDeathsCountry");
   const totalDayRecovh1 = document.getElementById("totalDayRecovCountry");
+  let myChart = document.getElementById("myChart").getContext("2d");
 
   totalCasesh1.innerHTML =
     "Total Cases: " + dataJson.countrydata[0].total_cases;
@@ -59,6 +66,21 @@ async function getDataCountry() {
     "Total New Deaths: " + dataJson.countrydata[0].total_new_deaths_today;
   totalDayRecovh1.innerHTML =
     "Total Active Cases: " + dataJson.countrydata[0].total_active_cases;
+
+  let totalChart = new Chart(myChart, {
+    type: "line",
+    data: {
+      labels: chartDateSlice,
+      datasets: [
+        {
+          label: "Total Cases",
+          data: chartInfoSlice,
+          backgroundColor: "grey"
+        }
+      ]
+    },
+    options: {}
+  });
 }
 
 getDataWorld();
