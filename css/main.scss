@@ -11,8 +11,11 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(54, 46, 46);
+}
 .bigContainer {
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(54, 46, 46);
   background-image: url(../img/coronaVirusimg.jpg);
   background-repeat: no-repeat;
   background-size: 100vw;
@@ -72,6 +75,7 @@
 
 .footer {
   position: absolute;
+  bottom: 0;
   .helpers {
     text-align: right;
     position: relative;
@@ -115,7 +119,7 @@
         list-style-type: none;
         font-size: 1.3rem;
         li {
-          margin-right: 0.7rem;
+          margin-right: 0.3rem;
         }
         a {
           text-decoration: none;
