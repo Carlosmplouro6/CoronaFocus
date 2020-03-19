@@ -1,5 +1,6 @@
 async function getDataWorld() {
   const data = await fetch("https://thevirustracker.com/free-api?global=stats");
+  console.log(data);
   const dataJson = await data.json();
   const totalCasesh1 = document.getElementById("totalCases");
   const totalDeathh1 = document.getElementById("totalDeath");

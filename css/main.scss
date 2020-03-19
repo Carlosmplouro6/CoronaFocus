@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap");
+
 :root {
   --baseFg: black;
   --baseBg: rgb(150, 25, 25);
   --accentFg: rgb(206, 94, 94);
   --accentBg: rgb(73, 3, 3);
+  font-family: "Roboto Slab", serif;
 }
 
 * {
@@ -58,6 +61,10 @@ body {
     font-size: 2.5rem;
     margin-left: 1rem;
     font-weight: bold;
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
   .navbar {
     ul {
@@ -67,16 +74,17 @@ body {
       li {
         margin-right: 2rem;
       }
-      a {
-        text-decoration: none;
-        color: black;
-      }
     }
+  }
+  a {
+    text-decoration: none;
+    color: black;
   }
 }
 
 .footer {
-  margin-top: auto;
+  position: absolute;
+  bottom: 0;
   .helpers {
     text-align: right;
     position: relative;
@@ -167,4 +175,24 @@ select:active {
   color: var(--accentBg);
   border-color: var(--accentFg);
   background-color: var(--accentFg);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  .Advice {
+    background-color: rgb(73, 68, 68);
+    border: 4px black solid;
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(83, 15, 15);
+    width: 80%;
+    height: 30vh;
+    h2,
+    h3,
+    p {
+      margin-top: 1rem;
+    }
+  }
 }

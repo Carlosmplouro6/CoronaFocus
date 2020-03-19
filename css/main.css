@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap");
 :root {
   --baseFg: black;
   --baseBg: rgb(150, 25, 25);
   --accentFg: rgb(206, 94, 94);
   --accentBg: rgb(73, 3, 3);
+  font-family: "Roboto Slab", serif;
 }
 
 * {
@@ -81,6 +83,11 @@ body {
   font-weight: bold;
 }
 
+.header .logo a {
+  text-decoration: none;
+  color: black;
+}
+
 .header .navbar ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -93,13 +100,14 @@ body {
   margin-right: 2rem;
 }
 
-.header .navbar ul a {
+.header a {
   text-decoration: none;
   color: black;
 }
 
 .footer {
-  margin-top: auto;
+  position: absolute;
+  bottom: 0;
 }
 
 .footer .helpers {
@@ -183,5 +191,29 @@ select:active {
   color: var(--accentBg);
   border-color: var(--accentFg);
   background-color: var(--accentFg);
+}
+
+.content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.content .Advice {
+  background-color: #494444;
+  border: 4px black solid;
+  border-radius: 10px;
+  text-align: center;
+  color: #530f0f;
+  width: 80%;
+  height: 30vh;
+}
+
+.content .Advice h2,
+.content .Advice h3,
+.content .Advice p {
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
