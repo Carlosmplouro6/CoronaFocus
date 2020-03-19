@@ -44,8 +44,6 @@ async function getDataCountry() {
   chartInfoSlice.pop();
   chartInfoSlice.pop();
   chartInfoSlice.push(dataJson.countrydata[0].total_cases);
-
-  console.log(chartDateSlice, chartInfoSlice);
   const totalCasesh1 = document.getElementById("totalCasesCountry");
   const totalDeathh1 = document.getElementById("totalDeathCountry");
   const totalRecoveredh1 = document.getElementById("totalRecoveredCountry");
