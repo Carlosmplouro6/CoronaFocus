@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap");
 
-$greyColor: rgb(80, 80, 80);
+$greyColor: rgb(165, 165, 165);
 $redColorBase: rgb(65, 18, 18);
 
 :root {
@@ -43,6 +43,7 @@ body {
     min-height: 41rem;
     min-width: 20rem;
     max-height: 60vh;
+    overflow: hidden;
     h1,
     h3 {
       margin: 1rem;
@@ -86,9 +87,6 @@ body {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  align-self: flex-end;
   .helpers {
     text-align: right;
     position: relative;
@@ -104,6 +102,7 @@ body {
   :root {
     font-size: 12px;
   }
+
   .bigContainer {
     flex-direction: column;
     background-size: 160vh;
@@ -128,14 +127,11 @@ body {
     }
     .navbar {
       ul {
-        display: flex;
-        list-style-type: none;
-        font-size: 1.3rem;
+        flex-direction: column;
         li {
           margin-right: 0.3rem;
         }
         a {
-          text-decoration: none;
           color: rgba(0, 0, 0, 0.7);
         }
       }
@@ -189,17 +185,28 @@ select:active {
   align-items: center;
   min-height: 85vh;
   .Advice {
-    background-color: rgb(80, 80, 80);
+    background-color: $greyColor;
     border: 4px black solid;
     border-radius: 10px;
     text-align: center;
     color: $redColorBase;
     width: 90%;
     height: 40vh;
+    overflow: hidden;
     h2,
     h3,
     p {
       margin: 0.5rem 1rem;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+    .Advice {
+      margin-top: 3rem;
+      height: 30vh;
     }
   }
 }

@@ -26,7 +26,7 @@ body {
 }
 
 .bigContainer {
-  background-color: #505050;
+  background-color: #a5a5a5;
   background-image: url(../img/coronaVirusimg.jpg);
   background-repeat: no-repeat;
   background-size: 100vw;
@@ -41,7 +41,7 @@ body {
 }
 
 .bigContainer .container {
-  background-color: #505050;
+  background-color: #a5a5a5;
   border: black 3px solid;
   border-radius: 10px;
   margin-top: 2rem;
@@ -51,6 +51,7 @@ body {
   min-height: 41rem;
   min-width: 20rem;
   max-height: 60vh;
+  overflow: hidden;
 }
 
 .bigContainer .container h1,
@@ -105,13 +106,6 @@ body {
   color: black;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
 .footer .helpers {
   text-align: right;
   position: relative;
@@ -151,17 +145,15 @@ body {
     font-size: 2rem;
   }
   .header .navbar ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    list-style-type: none;
-    font-size: 1.3rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .header .navbar ul li {
     margin-right: 0.3rem;
   }
   .header .navbar ul a {
-    text-decoration: none;
     color: rgba(0, 0, 0, 0.7);
   }
 }
@@ -209,18 +201,30 @@ select:active {
 }
 
 .content .Advice {
-  background-color: #505050;
+  background-color: #a5a5a5;
   border: 4px black solid;
   border-radius: 10px;
   text-align: center;
   color: #411212;
   width: 90%;
   height: 40vh;
+  overflow: hidden;
 }
 
 .content .Advice h2,
 .content .Advice h3,
 .content .Advice p {
   margin: 0.5rem 1rem;
+}
+
+@media (max-width: 700px) {
+  .content {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .content .Advice {
+    margin-top: 3rem;
+    height: 30vh;
+  }
 }
 /*# sourceMappingURL=main.css.map */
