@@ -132,11 +132,11 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    min-height: 20rem;
-    max-height: 45rem;
+    min-height: 22rem;
     margin-left: 5rem;
     margin-right: 5rem;
     margin-top: 2rem;
+    overflow: scroll;
   }
   .footer .helpers {
     top: 2rem;
@@ -224,7 +224,8 @@ select:active {
   }
   .content .Advice {
     margin-top: 3rem;
-    height: 30vh;
+    height: 40vh;
+    overflow: scroll;
   }
 }
 /*# sourceMappingURL=main.css.map */

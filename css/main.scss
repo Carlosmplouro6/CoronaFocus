@@ -108,11 +108,11 @@ body {
     background-size: 160vh;
     .container {
       justify-content: space-evenly;
-      min-height: 20rem;
-      max-height: 45rem;
+      min-height: 22rem;
       margin-left: 5rem;
       margin-right: 5rem;
       margin-top: 2rem;
+      overflow: scroll;
     }
   }
   .footer {
@@ -206,7 +206,8 @@ select:active {
     grid-template-columns: repeat(1, 1fr);
     .Advice {
       margin-top: 3rem;
-      height: 30vh;
+      height: 40vh;
+      overflow: scroll;
     }
   }
 }
