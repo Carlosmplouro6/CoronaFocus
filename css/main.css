@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap");
 :root {
-  --baseFg: black;
-  --baseBg: rgb(90, 24, 24);
-  --accentFg: rgb(206, 94, 94);
-  --accentBg: rgb(73, 3, 3);
   font-family: "Roboto Slab", serif;
 }
 
@@ -132,7 +128,8 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    min-height: 22rem;
+    min-height: 15rem;
+    max-height: 30vh;
     margin-left: 5rem;
     margin-right: 5rem;
     margin-top: 2rem;
@@ -162,14 +159,14 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
-  color: var(--baseFg);
-  border: 1px solid var(--baseFg);
+  color: black;
+  border: 1px solid black;
   line-height: 1;
   outline: 0;
   padding: 0.65em 2.5em 0.55em 0.75em;
   border-radius: 2px;
-  background-color: var(--baseBg);
-  background-image: linear-gradient(var(--baseFg), var(--baseFg)), linear-gradient(-135deg, transparent 50%, var(--accentBg) 50%), linear-gradient(-225deg, transparent 50%, var(--accentBg) 50%), linear-gradient(var(--accentBg) 42%, var(--accentFg) 42%);
+  background-color: #5a1818;
+  background-image: linear-gradient(black, black), linear-gradient(-135deg, transparent 50%, #490303 50%), linear-gradient(-225deg, transparent 50%, #490303 50%), linear-gradient(#490303 42%, #ce5e5e 42%);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
   background-position: right 20px center, right bottom, right bottom, right bottom;
@@ -177,14 +174,14 @@ select {
 }
 
 select:hover {
-  background-image: linear-gradient(var(--accentFg), var(--accentFg)), linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%), linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%), linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+  background-image: linear-gradient #ce5e5e, #ce5e5e, linear-gradient(-135deg, transparent 50%, #ce5e5e 50%), linear-gradient(-225deg, transparent 50%, #ce5e5e 50%), linear-gradient(#ce5e5e 42%, #490303 42%);
 }
 
 select:active {
-  background-image: linear-gradient(var(--accentFg), var(--accentFg)), linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%), linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%), linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
-  color: var(--accentBg);
-  border-color: var(--accentFg);
-  background-color: var(--accentFg);
+  background-image: linear-gradient(#ce5e5e, #ce5e5e), linear-gradient(-135deg, transparent 50%, #ce5e5e 50%), linear-gradient(-225deg, transparent 50%, #ce5e5e 50%), linear-gradient(#ce5e5e 42%, #490303 42%);
+  color: #490303;
+  border-color: #ce5e5e;
+  background-color: #ce5e5e;
 }
 
 .content {

@@ -2,12 +2,12 @@
 
 $greyColor: rgb(165, 165, 165);
 $redColorBase: rgb(65, 18, 18);
+$baseFg: black;
+$baseBg: rgb(90, 24, 24);
+$accentFg: rgb(206, 94, 94);
+$accentBg: rgb(73, 3, 3);
 
 :root {
-  --baseFg: black;
-  --baseBg: rgb(90, 24, 24);
-  --accentFg: rgb(206, 94, 94);
-  --accentBg: rgb(73, 3, 3);
   font-family: "Roboto Slab", serif;
 }
 
@@ -108,7 +108,8 @@ body {
     background-size: 160vh;
     .container {
       justify-content: space-evenly;
-      min-height: 22rem;
+      min-height: 15rem;
+      max-height: 30vh;
       margin-left: 5rem;
       margin-right: 5rem;
       margin-top: 2rem;
@@ -142,17 +143,17 @@ body {
 select {
   -webkit-appearance: none;
   appearance: none;
-  color: var(--baseFg);
-  border: 1px solid var(--baseFg);
+  color: $baseFg;
+  border: 1px solid $baseFg;
   line-height: 1;
   outline: 0;
   padding: 0.65em 2.5em 0.55em 0.75em;
   border-radius: 2px;
-  background-color: var(--baseBg);
-  background-image: linear-gradient(var(--baseFg), var(--baseFg)),
-    linear-gradient(-135deg, transparent 50%, var(--accentBg) 50%),
-    linear-gradient(-225deg, transparent 50%, var(--accentBg) 50%),
-    linear-gradient(var(--accentBg) 42%, var(--accentFg) 42%);
+  background-color: $baseBg;
+  background-image: linear-gradient($baseFg, $baseFg),
+    linear-gradient(-135deg, transparent 50%, $accentBg 50%),
+    linear-gradient(-225deg, transparent 50%, $accentBg 50%),
+    linear-gradient($accentBg 42%, $accentFg 42%);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
   background-position: right 20px center, right bottom, right bottom,
@@ -161,20 +162,20 @@ select {
 }
 
 select:hover {
-  background-image: linear-gradient(var(--accentFg), var(--accentFg)),
-    linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
-    linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
-    linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+  background-image: linear-gradient ($accentFg, $accentFg),
+    linear-gradient(-135deg, transparent 50%, $accentFg 50%),
+    linear-gradient(-225deg, transparent 50%, $accentFg 50%),
+    linear-gradient($accentFg 42%, $accentBg 42%);
 }
 
 select:active {
-  background-image: linear-gradient(var(--accentFg), var(--accentFg)),
-    linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
-    linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
-    linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
-  color: var(--accentBg);
-  border-color: var(--accentFg);
-  background-color: var(--accentFg);
+  background-image: linear-gradient($accentFg, $accentFg),
+    linear-gradient(-135deg, transparent 50%, $accentFg 50%),
+    linear-gradient(-225deg, transparent 50%, $accentFg 50%),
+    linear-gradient($accentFg 42%, $accentBg 42%);
+  color: $accentBg;
+  border-color: $accentFg;
+  background-color: $accentFg;
 }
 
 .content {
