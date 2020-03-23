@@ -55,7 +55,6 @@ body {
 .header {
   background-color: $redColorBase;
   min-height: 7.5vh;
-  width: 100vw;
 }
 .header {
   display: flex;
@@ -185,6 +184,7 @@ select:active {
   justify-items: center;
   align-items: center;
   min-height: 85vh;
+  margin-bottom: 1rem;
   .Advice {
     background-color: $greyColor;
     border: 4px black solid;
@@ -193,13 +193,27 @@ select:active {
     color: $redColorBase;
     width: 90%;
     height: 40vh;
-    overflow: hidden;
+    max-height: auto;
+    overflow: scroll;
     h2,
     h3,
     p {
       margin: 0.5rem 1rem;
     }
   }
+}
+
+.title {
+  grid-column: span 3;
+  position: static;
+  text-align: center;
+  color: white;
+  width: 80%;
+  margin: 0;
+  margin-top: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
 }
 
 @media (max-width: 700px) {
@@ -211,4 +225,12 @@ select:active {
       overflow: scroll;
     }
   }
+  .title {
+    grid-column: 1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
