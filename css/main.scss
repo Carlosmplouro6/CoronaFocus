@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap");
 
-$greyColor: rgb(165, 165, 165);
+$greyColor: rgb(202, 202, 202);
 $redColorBase: rgb(65, 18, 18);
 $baseFg: black;
 $baseBg: rgb(90, 24, 24);
@@ -142,7 +142,7 @@ body {
 select {
   -webkit-appearance: none;
   appearance: none;
-  color: $baseFg;
+  color: $accentFg;
   border: 1px solid $baseFg;
   line-height: 1;
   outline: 0;
@@ -231,6 +231,10 @@ select:active {
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+  width: 0.5rem;
   height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $redColorBase;
 }
