@@ -26,7 +26,7 @@ body {
   background-image: url(../img/coronaVirusimg.jpg);
   background-repeat: no-repeat;
   background-size: 100vw;
-  color: #411212;
+  color: #ce5e5e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,7 +37,7 @@ body {
 }
 
 .bigContainer .container {
-  background-color: #cacaca;
+  background-color: #411212;
   border: black 3px solid;
   border-radius: 10px;
   margin-top: 2rem;
@@ -79,9 +79,8 @@ body {
   font-weight: bold;
 }
 
-.header .logo a {
-  text-decoration: none;
-  color: black;
+.header .navbar input {
+  display: none;
 }
 
 .header .navbar ul {
@@ -98,7 +97,7 @@ body {
 
 .header a {
   text-decoration: none;
-  color: black;
+  color: #ce5e5e;
 }
 
 .footer .helpers {
@@ -139,6 +138,81 @@ body {
   }
   .header .logo {
     font-size: 2rem;
+  }
+  .header .navbar input {
+    position: relative;
+    top: 15px;
+    right: 5px;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+  .header .navbar span {
+    position: relative;
+    top: -8px;
+    display: block;
+    width: 3rem;
+    height: 0.3rem;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    border-radius: 3px;
+    background: black;
+    z-index: 1;
+    -webkit-transform-origin: 4px 0px;
+            transform-origin: 4px 0px;
+    -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  .header .navbar span:first-child {
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  .header .navbar span:nth-last-child(2) {
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  .header .navbar input:checked ~ span {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) translate(-2px, -1px);
+            transform: rotate(45deg) translate(-2px, -1px);
+    background: black;
+  }
+  .header .navbar input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+            transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  .header .navbar input:checked ~ span:nth-last-child(2) {
+    -webkit-transform: rotate(-45deg) translate(0, -1px);
+            transform: rotate(-45deg) translate(0, -1px);
+  }
+  .header .navbar .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+    -webkit-transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    z-index: 0;
+    display: none;
+  }
+  .header .navbar input:checked ~ ul {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    display: inline-block;
   }
   .header .navbar ul {
     -webkit-box-orient: vertical;
