@@ -155,7 +155,8 @@ body {
   }
   .header .navbar span {
     position: relative;
-    top: -8px;
+    top: -13px;
+    right: 5px;
     display: block;
     width: 3rem;
     height: 0.3rem;
@@ -225,7 +226,7 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    max-height: 50%;
+    max-height: 60%;
   }
   .header .navbar ul li {
     font-size: 2rem;
@@ -283,6 +284,7 @@ select:active {
 }
 
 .content .Advice {
+  margin-top: 2rem;
   background-color: #411212;
   border: 4px black solid;
   border-radius: 10px;

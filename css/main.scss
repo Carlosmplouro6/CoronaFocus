@@ -142,7 +142,8 @@ body {
       }
       span {
         position: relative;
-        top: -8px;
+        top: -13px;
+        right: 5px;
         display: block;
         width: 3rem;
         height: 0.3rem;
@@ -198,7 +199,7 @@ body {
       ul {
         flex-direction: column;
         justify-content: space-evenly;
-        max-height: 50%;
+        max-height: 60%;
         li {
           font-size: 2rem;
           text-align: center;
@@ -260,6 +261,7 @@ select:active {
   min-height: 85vh;
   background-image: linear-gradient(rgb(167, 73, 73), $redColorBase);
   .Advice {
+    margin-top: 2rem;
     background-color: $redColorBase;
     border: 4px black solid;
     border-radius: 10px;

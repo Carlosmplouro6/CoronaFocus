@@ -75,7 +75,7 @@ async function getDataCountry() {
         {
           label: "Total Cases",
           data: chartInfoSlice,
-          backgroundColor: "rgb(150, 25, 25)"
+          backgroundColor: "rgb(206, 94, 94)"
         }
       ]
     },
