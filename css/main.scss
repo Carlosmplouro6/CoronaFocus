@@ -258,13 +258,13 @@ select:active {
   justify-items: center;
   align-items: center;
   min-height: 85vh;
-  margin-bottom: 1rem;
+  background-image: linear-gradient(rgb(167, 73, 73), $redColorBase);
   .Advice {
-    background-color: $greyColor;
+    background-color: $redColorBase;
     border: 4px black solid;
     border-radius: 10px;
     text-align: center;
-    color: $redColorBase;
+    color: $accentFg;
     width: 90%;
     height: 40vh;
     max-height: auto;
@@ -281,7 +281,7 @@ select:active {
   grid-column: span 3;
   position: static;
   text-align: center;
-  color: white;
+  color: $redColorBase;
   width: 80%;
   margin: 0;
   margin-top: 1rem;

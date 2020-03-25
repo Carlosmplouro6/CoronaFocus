@@ -278,15 +278,16 @@ select:active {
       -ms-flex-align: center;
           align-items: center;
   min-height: 85vh;
-  margin-bottom: 1rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a74949), to(#411212));
+  background-image: linear-gradient(#a74949, #411212);
 }
 
 .content .Advice {
-  background-color: #cacaca;
+  background-color: #411212;
   border: 4px black solid;
   border-radius: 10px;
   text-align: center;
-  color: #411212;
+  color: #ce5e5e;
   width: 90%;
   height: 40vh;
   max-height: auto;
@@ -303,7 +304,7 @@ select:active {
   grid-column: span 3;
   position: static;
   text-align: center;
-  color: white;
+  color: #411212;
   width: 80%;
   margin: 0;
   margin-top: 1rem;
