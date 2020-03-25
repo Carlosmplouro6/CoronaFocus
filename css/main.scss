@@ -92,8 +92,9 @@ body {
     position: relative;
     top: 1.5rem;
     margin-right: 1rem;
+    color: $accentFg;
     a {
-      color: black;
+      color: $accentFg;
     }
   }
 }
@@ -209,6 +210,7 @@ body {
         }
         a {
           color: $accentFg;
+          padding: 0 10rem;
         }
       }
     }
