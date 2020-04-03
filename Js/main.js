@@ -1,5 +1,7 @@
 async function getDataWorld() {
-  const data = await fetch("https://thevirustracker.com/free-api?global=stats");
+  const data = await fetch(
+    "https://cors-anywhere.herokuapp.com/https://thevirustracker.com/free-api?global=stats"
+  );
   const dataJson = await data.json();
   const totalCasesh1 = document.getElementById("totalCases");
   const totalDeathh1 = document.getElementById("totalDeath");
@@ -23,11 +25,13 @@ async function getDataWorld() {
 async function getDataCountry() {
   const countryID = document.getElementById("countryInput").value;
   const data = await fetch(
-    "https://thevirustracker.com/free-api?countryTotal=" + countryID
+    "https://cors-anywhere.herokuapp.com/https://thevirustracker.com/free-api?countryTotal=" +
+      countryID
   );
   const dataJson = await data.json();
   const timeline = await fetch(
-    "https://thevirustracker.com/free-api?countryTimeline=" + countryID
+    "https://cors-anywhere.herokuapp.com/https://thevirustracker.com/free-api?countryTimeline=" +
+      countryID
   );
   const timelineJson = await timeline.json();
 
